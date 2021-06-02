@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dogs Meme</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    
+    <div id="app">
+        <h1 class="title">{{ appTitle }}</h1>
+        <div class="image" :style="{'background-image': 'url('+ picture +')'}"/></div>
+        <p class="dog-name"><b>Name:</b> {{ firstName }}</p>
+        <p class="breed-for"><b>Breed for:</b> {{ breedFor }}</p>
+        <p class="temperament"><b>Temperament:</b> {{ temperament }}</p>
+        <button class="btn-submit" v-on:click="getDog()">Random</button>
+    </div>
+
+    <footer id="footer">
+        <p>{{programmer}} | {{apiName}}</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
