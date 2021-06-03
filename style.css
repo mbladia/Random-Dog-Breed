@@ -22,8 +22,12 @@ body{
     padding: 50px;
     height: 100%;
 }
+#app b{
+    color: rgb(160, 2, 2);
+}
 
 #app .image{
+
     background-position: center;
     background-size: cover;
     border: orange 4px solid;
