@@ -1,5 +1,3 @@
-const key = config.MY_KEY;
-
 const app = new Vue({
     el: "#app",
     
@@ -14,7 +12,7 @@ const app = new Vue({
     },
     methods: {
         async getDog(){
-            const qry =  await fetch('https://api.thedogapi.com/v1/images/search?key=499a6ae5-3cb0-4ca7-85c0-be11ffd429bd&size=thumb&format=json&has_breeds=true&order=RANDOM&page=0&limit=1')
+            const qry =  await fetch('https://api.thedogapi.com/v1/images/search?key=499a6ae5-3cb0-4ca7-85c0-be11ffd429bd&size=thumb&has_breeds=true&order=RANDOM&limit=1')
             const data = await qry.json() 
             console.log(data[0])
 
@@ -32,7 +30,7 @@ const footer = new Vue({
     data(){
         return{
             apiName: 'The Dog API',
-            api: 'https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1',
+            api: 'https://api.thedogapi.com/v1/images/search?size=thumb&mime_types=jpg&has_breeds=true&order=RANDOM&limit=1',
             apiCredit: '©POSTMAN',
             programmer: '©Mark Bryan Ladia'
         }
